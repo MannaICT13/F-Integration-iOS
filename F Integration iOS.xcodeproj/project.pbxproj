@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		2A96FD1325503A0E00089F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A96FD1125503A0E00089F92 /* Main.storyboard */; };
 		2A96FD1525503A1300089F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A96FD1425503A1300089F92 /* Assets.xcassets */; };
 		2A96FD1825503A1300089F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A96FD1625503A1300089F92 /* LaunchScreen.storyboard */; };
+		2A96FD2F2550751800089F92 /* Pods_F_Integration_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7431D2ADB579B30181C54073 /* Pods_F_Integration_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		2A96FD1425503A1300089F92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A96FD1725503A1300089F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A96FD1925503A1300089F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DEB4723853346A2EFF57DD7 /* Pods-F Integration iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F Integration iOS.release.xcconfig"; path = "Target Support Files/Pods-F Integration iOS/Pods-F Integration iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7431D2ADB579B30181C54073 /* Pods_F_Integration_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_F_Integration_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2833CA1691CEA93B62F9E2C /* Pods-F Integration iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F Integration iOS.debug.xcconfig"; path = "Target Support Files/Pods-F Integration iOS/Pods-F Integration iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A96FD2F2550751800089F92 /* Pods_F_Integration_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2A96FD0A25503A0E00089F92 /* F Integration iOS */,
 				2A96FD0925503A0E00089F92 /* Products */,
+				2A96FD28255047E800089F92 /* Frameworks */,
+				EF639F3E6D0A89359E6B9CE9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "F Integration iOS";
 			sourceTree = "<group>";
 		};
+		2A96FD28255047E800089F92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7431D2ADB579B30181C54073 /* Pods_F_Integration_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF639F3E6D0A89359E6B9CE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2833CA1691CEA93B62F9E2C /* Pods-F Integration iOS.debug.xcconfig */,
+				4DEB4723853346A2EFF57DD7 /* Pods-F Integration iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +98,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A96FD1C25503A1300089F92 /* Build configuration list for PBXNativeTarget "F Integration iOS" */;
 			buildPhases = (
+				3233C94D1BAD8CE82199824D /* [CP] Check Pods Manifest.lock */,
 				2A96FD0425503A0E00089F92 /* Sources */,
 				2A96FD0525503A0E00089F92 /* Frameworks */,
 				2A96FD0625503A0E00089F92 /* Resources */,
+				754C5AF0D8AD9CFA5E326878 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "F Integration iOS";
+			packageProductDependencies = (
+			);
 			productName = "F Integration iOS";
 			productReference = 2A96FD0825503A0E00089F92 /* F Integration iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -103,7 +131,7 @@
 				};
 			};
 			buildConfigurationList = 2A96FD0325503A0E00089F92 /* Build configuration list for PBXProject "F Integration iOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 2A96FCFF25503A0E00089F92;
+			packageReferences = (
+				2A96FD1F2550467D00089F92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 2A96FD0925503A0E00089F92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +163,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3233C94D1BAD8CE82199824D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-F Integration iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		754C5AF0D8AD9CFA5E326878 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-F Integration iOS/Pods-F Integration iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-F Integration iOS/Pods-F Integration iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-F Integration iOS/Pods-F Integration iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A96FD0425503A0E00089F92 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		2A96FD1D25503A1300089F92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2833CA1691CEA93B62F9E2C /* Pods-F Integration iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		2A96FD1E25503A1300089F92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DEB4723853346A2EFF57DD7 /* Pods-F Integration iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +413,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A96FD1F2550467D00089F92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 2A96FD0025503A0E00089F92 /* Project object */;
 }

@@ -1,0 +1,6 @@
+framework module Pods_F_Integration_iOS {
+  umbrella header "Pods-F Integration iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

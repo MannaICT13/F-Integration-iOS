@@ -7,14 +7,65 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+import FBSDKLoginKit
+class ViewController: UIViewController,LoginButtonDelegate {
+    
+  
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .cyan
+        
+        if let token = AccessToken.current,
+            !token.isExpired {
+            
+            let token = token.tokenString
+            
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
+                                                     parameters: ["fields":"email,name"],
+                                                     tokenString: token,
+                                                     version: nil,
+                                                     httpMethod: .get)
+            request.start { (connection, result, error) in
+            
+                print("\(String(describing: result))")
+            }
+            
+            
+            
+        }else{
+            let loginButton = FBLoginButton()
+                          loginButton.center = view.center
+                          loginButton.delegate = self
+                          loginButton.permissions = ["public_profile", "email"]
+                          view.addSubview(loginButton)
+                   
+        }
+        
+          
     }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+    
+        let token = result?.token?.tokenString
+        let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
+                                                 parameters: ["fields":"email,name"],
+                                                 tokenString: token,
+                                                 version: nil,
+                                                 httpMethod: .get)
+        request.start { (connection, result, error) in
 
+            print("\(String(describing: result))")
+            
+        }
+       
+        
+    }
+    
+  func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+    
+    }
 
 }
 
